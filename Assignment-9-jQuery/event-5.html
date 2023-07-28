@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>index</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+	$(document).ready(function() {
+
+            $("#myDiv1").width("400px").height("400px");
+
+
+            $("body").on({
+                click: function(event) {
+                    window.alert(event.target.nodeName + " was clicked")
+                },
+
+                mouseenter: function(event) {
+                    window.alert("The mouse entered " + event.target.nodeName)
+                },
+
+                mouseleave: function(event) {
+                    window.alert("The mouse left " + event.target.nodeName)
+                }
+                
+            }, "div");
+        });
+		</script>
+	</head>
+
+	<body>
+		
+		<div id= "myDiv1" style="background-color: gray"></div>
+	</body>
+</html>
